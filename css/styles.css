@@ -212,22 +212,181 @@ body {
   }
 }
 
-.container-main {
-  min-height: 432px;
+/* ------------------------HERO-MOBILE-------------------- */
+
+.main-section {
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/mobile-hero-bg.jpg);
-  padding-top: 72px;
-  padding-bottom: 72px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 432px;
+  padding-top: 72px;
+  padding-bottom: 72px;
 }
 
-/* -------------------------TABLET---------------------------- */
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 72px;
+}
+
+@media screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 3dppx),
+  screen and (min-device-pixel-ratio: 2) {
+  .main-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mobile-hero-bg@2x.jpg);
+  }
+}
+
+.main-header-text {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  width: 224px;
+}
+
+.order-button {
+  display: block;
+  min-width: 169px;
+  color: #fff;
+  background-color: #4d5ae5;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding: 16px 32px;
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ----------------------MOBILE-BENEFITS------------------ */
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  min-width: 288px;
+  max-width: 1158px;
+  margin: 0 auto;
+}
+
+.benefits-list-item {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #2e2f42;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+}
+
+.benefits-list-item-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* -----------------------MOBILE-TEAM----------------- */
+
+.team-section {
+  background-color: #f4f4fd;
+}
+
+.team-section-title {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+  min-width: 288px;
+  max-width: 1158px;
+  margin: 0 auto;
+}
+
+.team-list-item {
+  background-color: #fff;
+  width: 264px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.teammate-name-position {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.teammate-name {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.team-list-position {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.team-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.team-socials-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ======================TABLET=========================== */
 
 @media screen and (min-width: 766px) {
   .container {
@@ -251,7 +410,19 @@ body {
   .contacts {
     display: flex;
   }
+
+  /* ---------------TABLET-HERO--------- */
+
+  /* -------------TABLET-BENEFITS------------- */
 }
+
+@media screen and (max-width: 1157px) {
+  .benefits-icon-box {
+    display: none;
+  }
+}
+
+/* ======================DESKTOP========================== */
 
 @media screen and (min-width: 1158px) {
   .container {
