@@ -214,7 +214,12 @@ body {
 
 /* ------------------------HERO-MOBILE-------------------- */
 
-.main-section {
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 72px;
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -229,18 +234,10 @@ body {
   padding-bottom: 72px;
 }
 
-.container-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 72px;
-}
-
 @media screen and (min-resolution: 192dpi),
   screen and (min-resolution: 3dppx),
   screen and (min-device-pixel-ratio: 2) {
-  .main-section {
+  .container-main {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -282,6 +279,8 @@ body {
 .section {
   padding-top: 96px;
   padding-bottom: 96px;
+  max-width: 318px;
+  margin: 0 auto;
 }
 
 .benefits-list {
@@ -347,6 +346,9 @@ body {
 }
 
 .teammate-name-position {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -372,7 +374,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  margin-top: 8px;
 }
 
 .team-socials-link {
@@ -384,6 +385,68 @@ body {
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ------------------------MOBILE-PORTFOLIO--------------------------- */
+
+.portfolio-section-title {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  margin-bottom: 72px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  min-width: 288px;
+  max-width: 1158px;
+  margin: 0 auto;
+}
+
+.prtfl-list-item {
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.prtfl-list-item:first-child {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-name-type {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
+.portfolio-list-item {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.portfolio-list-item-description {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* --------------------------MOBILE-FOOTER------------------------ */
+
+.page-bottom {
+  background-color: #2e2f42;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 /* ======================TABLET=========================== */
@@ -418,6 +481,10 @@ body {
 
 @media screen and (max-width: 1157px) {
   .benefits-icon-box {
+    display: none;
+  }
+
+  .portfolio-overlay {
     display: none;
   }
 }
