@@ -757,9 +757,6 @@ button {
   opacity: 1;
 }
 
-.link-to-privacy-policy {
-}
-
 .container-callback-checkbox-label {
   color: #8e8f99;
   font-size: 12px;
@@ -773,7 +770,6 @@ button {
 }
 
 .callback-send-btn {
-  border-radius: 4px;
   display: block;
   min-width: 169px;
   height: 56px;
@@ -784,6 +780,7 @@ button {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
   border: none;
